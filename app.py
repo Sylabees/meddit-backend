@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from flask import request
 
 app = Flask('meddit')
 CORS(app)  # allows frontend to connect
@@ -37,4 +38,40 @@ def delete_one_post(single_id):
         return jsonify({"error": f'ID {single_id} could not be found!'}), 404    
     posts = updated_posts
     return jsonify({"message": f'id {single_id} has been deleted'}), 200
+
+# Add one post
+@app.route('/posts', methods = ['POST'])
+def create_post():
+    global posts
+    body = request.get_json()
+
+    if isinstance(body, dict):
+        next_id = max([x["id"] for x in posts], default = 0) + 1
+        body["id"] = next_id
+        posts.append(body)
+        return jsonify({"message": f"ID {next_id} added"}), 201
+    else:
+        return jsonify({"error": "unable to add"}), 400
+    
+# Update one post
+@app.route('/posts/<int:single_id>', methods = ['PUT'])
+def update_post(single_id):
+    global posts
+    body = request.get_json()
+    updated_posts = [x for x in posts if x["id"] != single_id]
+
+    if len(updated_posts) == len(posts):
+        return jsonify({"error": f"ID {single_id} doesn't exist"}), 404
+
+    if isinstance(body, dict):
+        body["id"] = single_id
+        updated_posts.append(body)
+        posts = updated_posts
+        return jsonify({"message": f"ID {single_id} updated"}), 200
+    else:
+        return jsonify({"error": "unable to update"}), 400
+
+
+
+
 
