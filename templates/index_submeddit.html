@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{title or 'Home Page'}}</title>
+    <title>My first forum - {{posts|length}} posts</title>
 </head>
 
 <body>
-<h2>{{ title or 'Home Page' }}</h2>
+<h2>Home Page</h2>
 <a href="/create"><button>Create a New Post</button></a>
 <ul>
 {% for post in posts %}

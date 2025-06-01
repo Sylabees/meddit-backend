@@ -18,6 +18,18 @@ with open("meddit_posts.json") as f:
 def home_page():
     return render_template('index.html', posts=posts)
 
+## Submeddit pages
+@app.route('/submeddit/<string:submeddit>')
+def submeddit_page(submeddit):
+    submeddit_posts = [x for x in posts if x['submeddit'] == submeddit]
+    return render_template('index.html', posts=submeddit_posts, title = f"Posts in {submeddit}")
+
+# user pages
+@app.route('/user/<string:user>')
+def user_page(user):
+    user_posts = [x for x in posts if x['author'] == user]
+    return render_template('index.html', posts=user_posts, title = f"Posts by {user}")
+
 ### /posts/
 
 # Get all posts
@@ -114,7 +126,6 @@ def delete_submeddit_post(single_id):
     global posts
     posts = [x for x in posts if x['id'] != single_id]
     return redirect(f'/')
-
 
 # template filters
 @app.template_filter('format_date')
