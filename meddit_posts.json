@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "title": "Gene therapy was used to",
+    "body": "Gene therapy was used to reverse congenital blindness in a clinical trial, marking a milestone in ocular medicine.",
+    "author": "Charlie",
+    "submeddit": "Science",
+    "created_at": "2025-05-30T10:36:47.599498"
+  },
+  {
+    "id": 2,
+    "title": "Bookmark localhost ports in",
+    "body": "Bookmark localhost ports in Chrome DevTools for seamless UI testing workflows.",
+    "author": "Alice",
+    "submeddit": "Useful tips",
+    "created_at": "2025-05-27T10:06:47.599938"
+  },
+  {
+    "id": 3,
+    "title": "Item drops at tier 3 and",
+    "body": "Item drops at tier 3 and above are now influenced by total team net worth, not time.",
+    "author": "Bob",
+    "submeddit": "Dota 2",
+    "created_at": "2025-05-30T17:11:47.600646"
+  },
+  {
+    "id": 4,
+    "title": "Researchers discovered a",
+    "body": "Researchers discovered a subatomic particle that challenges the Standard Model, suggesting new forces at play.",
+    "author": "Alice",
+    "submeddit": "Science",
+    "created_at": "2025-05-27T01:55:47.601729"
+  },
+  {
+    "id": 5,
+    "title": "Bananas are radioactive due",
+    "body": "Bananas are radioactive due to their high potassium-40 content, though not dangerously so.",
+    "author": "Bob",
+    "submeddit": "Fun Facts",
+    "created_at": "2025-05-30T23:13:47.603406"
+  },
+  {
+    "id": 6,
+    "title": "Dolphins call each other by",
+    "body": "Dolphins call each other by name using individualized whistles.",
+    "author": "Bob",
+    "submeddit": "Fun Facts",
+    "created_at": "2025-05-27T02:38:47.604649"
+  },
+  {
+    "id": 7,
+    "title": "Leverage makefiles to",
+    "body": "Leverage makefiles to standardize build and test commands in cross-platform projects.",
+    "author": "Alice",
+    "submeddit": "Useful tips",
+    "created_at": "2025-05-29T08:41:47.606850"
+  },
+  {
+    "id": 8,
+    "title": "A climate feedback model",
+    "body": "A climate feedback model predicts Arctic amplification will accelerate faster than previously forecasted.",
+    "author": "Bob",
+    "submeddit": "Science",
+    "created_at": "2025-05-30T06:45:47.609346"
+  },
+  {
+    "id": 9,
+    "title": "Gleipnir's synergy with",
+    "body": "Gleipnir's synergy with disabler builds has become central to snowball strats in Ranked.",
+    "author": "Alice",
+    "submeddit": "Dota 2",
+    "created_at": "2025-05-31T03:21:47.612793"
+  },
+  {
+    "id": 10,
+    "title": "Wombat poop is cube-shaped to",
+    "body": "Wombat poop is cube-shaped to prevent it from rolling away and is used to mark territory.",
+    "author": "Charlie",
+    "submeddit": "Fun Facts",
+    "created_at": "2025-05-31T14:52:47.616048"
+  },
+  {
+    "id": 11,
+    "title": "Use cron jobs to automate",
+    "body": "Use cron jobs to automate cleanup of stale logs or cache folders on your dev machine.",
+    "author": "Charlie",
+    "submeddit": "Useful tips",
+    "created_at": "2025-05-30T11:47:47.619689"
+  },
+  {
+    "id": 12,
+    "title": "The James Webb Telescope",
+    "body": "The James Webb Telescope identified carbon-based molecules in distant galaxies, hinting at early life conditions.",
+    "author": "Bob",
+    "submeddit": "Science",
+    "created_at": "2025-05-27T10:08:47.624720"
+  },
+  {
+    "id": 13,
+    "title": "Pub matches now mimic",
+    "body": "Pub matches now mimic pro-drafts due to widespread coverage of tier-one tournaments.",
+    "author": "Bob",
+    "submeddit": "Dota 2",
+    "created_at": "2025-06-01T04:41:47.629308"
+  },
+  {
+    "id": 14,
+    "title": "Elephants mourn their dead,",
+    "body": "Elephants mourn their dead, displaying behaviors that suggest grief and memory.",
+    "author": "Bob",
+    "submeddit": "Fun Facts",
+    "created_at": "2025-05-27T16:32:47.633501"
+  },
+  {
+    "id": 15,
+    "title": "Switch from SQLite to",
+    "body": "Switch from SQLite to PostgreSQL for concurrent user environments to reduce write locks.",
+    "author": "Charlie",
+    "submeddit": "Useful tips",
+    "created_at": "2025-05-29T06:29:47.638382"
+  },
+  {
+    "id": 16,
+    "title": "NPC disposition now adjusts",
+    "body": "NPC disposition now adjusts subtly based on class origin, not just dialogue choices.",
+    "author": "Charlie",
+    "submeddit": "Baldurs Gate 3",
+    "created_at": "2025-05-30T18:56:47.643975"
+  },
+  {
+    "id": 17,
+    "title": "Deep-sea vents could host",
+    "body": "Deep-sea vents could host synthetic life experiments simulating conditions on Europa and Enceladus.",
+    "author": "Charlie",
+    "submeddit": "Science",
+    "created_at": "2025-05-26T00:26:47.650861"
+  },
+  {
+    "id": 18,
+    "title": "Patch 7",
+    "body": "Patch 7.35 introduced stat changes making tanky supports like Undying top-tier once more.",
+    "author": "Alice",
+    "submeddit": "Dota 2",
+    "created_at": "2025-05-26T00:38:47.656716"
+  },
+  {
+    "id": 19,
+    "title": "Invoker's alacrity and chaos",
+    "body": "Invoker's alacrity and chaos meteor combo returned as a favored burst tactic.",
+    "author": "Dana",
+    "submeddit": "Dota 2",
+    "created_at": "2025-05-31T02:03:47.663151"
+  },
+  {
+    "id": 20,
+    "title": "Act II now contains three new",
+    "body": "Act II now contains three new optional quest hubs with diverging storylines and loot paths.",
+    "author": "Charlie",
+    "submeddit": "Baldurs Gate 3",
+    "created_at": "2025-05-31T19:33:47.672191"
+  },
+  {
+    "id": 21,
+    "title": "AI-assisted drug design led",
+    "body": "AI-assisted drug design led to a novel antibiotic capable of defeating resistant bacterial strains.",
+    "author": "Bob",
+    "submeddit": "Science",
+    "created_at": "2025-05-28T16:54:47.684147"
+  },
+  {
+    "id": 22,
+    "title": "Reputation systems were",
+    "body": "Reputation systems were revamped to dynamically impact pricing and NPC trust levels.",
+    "author": "Charlie",
+    "submeddit": "Baldurs Gate 3",
+    "created_at": "2025-05-26T11:53:47.695345"
+  },
+  {
+    "id": 23,
+    "title": "Enable git pre-commit hooks",
+    "body": "Enable git pre-commit hooks to lint and test before every commit \u2014 catch bugs early.",
+    "author": "Charlie",
+    "submeddit": "Useful tips",
+    "created_at": "2025-05-29T03:19:47.702061"
+  },
+  {
+    "id": 24,
+    "title": "Wildshape functionality",
+    "body": "Wildshape functionality expanded to include aquatic travel and stealth mechanics.",
+    "author": "Alice",
+    "submeddit": "Baldurs Gate 3",
+    "created_at": "2025-05-25T21:18:47.708753"
+  },
+  {
+    "id": 25,
+    "title": "Larian confirmed modding",
+    "body": "Larian confirmed modding support with full scripting access for encounter design.",
+    "author": "Charlie",
+    "submeddit": "Baldurs Gate 3",
+    "created_at": "2025-06-01T03:17:47.715502"
+  },
+  {
+    "id": 26,
+    "title": "A breakthrough in neural",
+    "body": "A breakthrough in neural interface tech enabled a paralyzed individual to write using brain impulses.",
+    "author": "Dana",
+    "submeddit": "Science",
+    "created_at": "2025-05-30T19:36:47.724461"
+  },
+  {
+    "id": 27,
+    "title": "Meta shifts have introduced",
+    "body": "Meta shifts have introduced niche off-meta heroes back into pro play with devastating results.",
+    "author": "Dana",
+    "submeddit": "Dota 2",
+    "created_at": "2025-05-28T10:01:47.733408"
+  },
+  {
+    "id": 28,
+    "title": "Create shell scripts to",
+    "body": "Create shell scripts to trigger local development environments with one terminal command.",
+    "author": "Dana",
+    "submeddit": "Useful tips",
+    "created_at": "2025-05-31T20:51:47.742570"
+  },
+  {
+    "id": 29,
+    "title": "Lane equilibrium manipulation",
+    "body": "Lane equilibrium manipulation is a trending technique among top 500 players.",
+    "author": "Alice",
+    "submeddit": "Dota 2",
+    "created_at": "2025-05-26T04:05:47.750495"
+  },
+  {
+    "id": 30,
+    "title": "Coaching tools now available",
+    "body": "Coaching tools now available in replays allow players to better analyze lane misplays.",
+    "author": "Bob",
+    "submeddit": "Dota 2",
+    "created_at": "2025-05-31T22:32:47.759532"
+  },
+  {
+    "id": 31,
+    "title": "New battery technology based",
+    "body": "New battery technology based on solid-state lithium cells offers 5x the charge cycles with faster performance.",
+    "author": "Charlie",
+    "submeddit": "Science",
+    "created_at": "2025-05-29T02:23:47.771502"
+  },
+  {
+    "id": 32,
+    "title": "Mount network drives with",
+    "body": "Mount network drives with `autofs` to automate team-shared storage across reboots.",
+    "author": "Alice",
+    "submeddit": "Useful tips",
+    "created_at": "2025-05-28T17:41:47.784964"
+  },
+  {
+    "id": 33,
+    "title": "Backgrounds now unlock",
+    "body": "Backgrounds now unlock exclusive dialogues that significantly alter story branches.",
+    "author": "Bob",
+    "submeddit": "Baldurs Gate 3",
+    "created_at": "2025-05-27T06:21:47.795949"
+  },
+  {
+    "id": 34,
+    "title": "Use environment variables in",
+    "body": "Use environment variables in `~/.bash_profile` or `.zshrc` for safe credential storage.",
+    "author": "Bob",
+    "submeddit": "Useful tips",
+    "created_at": "2025-05-26T13:53:47.806111"
+  },
+  {
+    "id": 35,
+    "title": "Sloths can take up to a month",
+    "body": "Sloths can take up to a month to digest a single meal due to their extremely slow metabolism.",
+    "author": "Alice",
+    "submeddit": "Fun Facts",
+    "created_at": "2025-05-28T14:23:47.817909"
+  },
+  {
+    "id": 36,
+    "title": "Compress repetitive JSON data",
+    "body": "Compress repetitive JSON data structures using schema flattening for faster load times.",
+    "author": "Bob",
+    "submeddit": "Useful tips",
+    "created_at": "2025-05-26T20:09:47.828561"
+  },
+  {
+    "id": 37,
+    "title": "Multiclassing has been",
+    "body": "Multiclassing has been reworked to allow full spell progression for hybrids like Sorcadin.",
+    "author": "Bob",
+    "submeddit": "Baldurs Gate 3",
+    "created_at": "2025-05-25T12:40:47.840148"
+  },
+  {
+    "id": 38,
+    "title": "Player toxicity reports now",
+    "body": "Player toxicity reports now influence matchmaking tiering via hidden behavior scores.",
+    "author": "Dana",
+    "submeddit": "Dota 2",
+    "created_at": "2025-05-28T07:28:47.852083"
+  },
+  {
+    "id": 39,
+    "title": "Butterflies can taste with",
+    "body": "Butterflies can taste with their feet, which helps them identify suitable host plants.",
+    "author": "Bob",
+    "submeddit": "Fun Facts",
+    "created_at": "2025-05-25T22:30:47.864245"
+  },
+  {
+    "id": 40,
+    "title": "Custom characters now receive",
+    "body": "Custom characters now receive voice-acted lines instead of silence during cutscenes.",
+    "author": "Alice",
+    "submeddit": "Baldurs Gate 3",
+    "created_at": "2025-05-26T05:48:47.877018"
+  },
+  {
+    "id": 41,
+    "title": "Quantum supremacy has been",
+    "body": "Quantum supremacy has been achieved by newer photonic computers, solving problems beyond classical reach.",
+    "author": "Charlie",
+    "submeddit": "Science",
+    "created_at": "2025-05-29T18:42:47.892127"
+  },
+  {
+    "id": 42,
+    "title": "Back up dotfiles using GitHub",
+    "body": "Back up dotfiles using GitHub repos and symbolic links to maintain consistent setups.",
+    "author": "Charlie",
+    "submeddit": "Useful tips",
+    "created_at": "2025-05-27T12:10:47.904957"
+  },
+  {
+    "id": 43,
+    "title": "Neutral creeps now scale",
+    "body": "Neutral creeps now scale harder post-30 mins, changing late-game jungle strategies.",
+    "author": "Charlie",
+    "submeddit": "Dota 2",
+    "created_at": "2025-06-01T08:16:47.917687"
+  },
+  {
+    "id": 44,
+    "title": "New Bard subclass enhances",
+    "body": "New Bard subclass enhances campfire interactions and unlocks faction songs.",
+    "author": "Charlie",
+    "submeddit": "Baldurs Gate 3",
+    "created_at": "2025-05-30T22:56:47.929876"
+  },
+  {
+    "id": 45,
+    "title": "Patch 4 added dynamic music",
+    "body": "Patch 4 added dynamic music layering tied to enemy health and terrain conditions.",
+    "author": "Bob",
+    "submeddit": "Baldurs Gate 3",
+    "created_at": "2025-05-31T22:08:47.945674"
+  },
+  {
+    "id": 46,
+    "title": "Octopuses have nine brains \u2014",
+    "body": "Octopuses have nine brains \u2014 one central brain and a mini-brain in each arm.",
+    "author": "Alice",
+    "submeddit": "Fun Facts",
+    "created_at": "2025-05-28T10:00:47.958561"
+  },
+  {
+    "id": 47,
+    "title": "In Switzerland, it\u2019s illegal",
+    "body": "In Switzerland, it\u2019s illegal to own just one guinea pig \u2014 they get lonely without companions.",
+    "author": "Charlie",
+    "submeddit": "Fun Facts",
+    "created_at": "2025-06-01T08:36:47.975735"
+  },
+  {
+    "id": 48,
+    "title": "The tongue of a blue whale",
+    "body": "The tongue of a blue whale weighs as much as an elephant and can fit 50 people in its mouth.",
+    "author": "Dana",
+    "submeddit": "Fun Facts",
+    "created_at": "2025-05-31T10:37:47.992714"
+  },
+  {
+    "id": 49,
+    "title": "A group of flamingos is",
+    "body": "A group of flamingos is called a 'flamboyance', which reflects their vivid appearance.",
+    "author": "Charlie",
+    "submeddit": "Fun Facts",
+    "created_at": "2025-05-31T21:11:48.008588"
+  },
+  {
+    "id": 50,
+    "title": "The latest Mars rover found",
+    "body": "The latest Mars rover found hydrated minerals, pointing to the planet\u2019s wet past and potential for microbial life.",
+    "author": "Alice",
+    "submeddit": "Science",
+    "created_at": "2025-05-30T15:04:48.029002"
+  }
+]

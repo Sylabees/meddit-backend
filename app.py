@@ -1,20 +1,23 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask import request
+from flask import render_template
+import json
 
 app = Flask('meddit')
 CORS(app)  # allows frontend to connect
 
-# In-memory post store (list of dicts)
-posts = [
-    {"id": 1, "title": "First post", "body": "Hello world", "author": "Matt"},
-    {"id": 2, "title": "Second post", "body": "Flask is fun", "author": "Matt"},
-]
+#Load data
+with open("meddit_posts.json") as f:
+    posts = list(json.load(f))
 
-# Root route to test
+### Home Page
+
 @app.route('/')
-def index():
-    return jsonify({"message": "Welcome to Meddit API!"})
+def home_page():
+    return render_template('index.html', posts=posts)
+
+### /posts/
 
 # Get all posts
 @app.route('/posts', methods=['GET'])
@@ -71,7 +74,14 @@ def update_post(single_id):
     else:
         return jsonify({"error": "unable to update"}), 400
 
+### /views/
 
+@app.route('/view/<int:single_id>')
+def render_single_page(single_id):
+    single_post = [x for x in posts if x['id'] == single_id]
+    if len(single_post) < 1:
+        return jsonify({"error": f"No post with ID: {single_id}"})
+    return render_template('post.html', post=single_post[0])
 
 
 

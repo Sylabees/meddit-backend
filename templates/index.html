@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My first forum - {{posts|length}} posts</title>
+</head>
+
+<body>
+<h2>Home Page</h2>
+<ul>
+{% for post in posts %}
+    <li>
+    {{post.title}}
+    <a href="/view/{{post.id}}">View</a>
+    | {{post.author}}
+    | {{post.submeddit}}
+    </li>
+{% endfor %}
+</ul>
+</body>
+</html>
