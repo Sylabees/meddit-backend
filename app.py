@@ -84,10 +84,12 @@ def render_single_page(single_id):
         return jsonify({"error": f"No post with ID: {single_id}"})
     return render_template('post.html', post=single_post[0])
 
+# Create post
 @app.route('/create')
 def create_meddit_post():
     return render_template('form.html')
 
+# Submit post
 @app.route('/submit', methods = ['POST'])
 def submit_meddit_post():
     global posts
@@ -106,8 +108,31 @@ def submit_meddit_post():
 
     return redirect(f'/view/{new_id}')
 
+# # Delete post
+# @app.route('/delete')
+# def delete_submeddit_post():
+
+
 # template filters
 @app.template_filter('format_date')
 def format_date(value):
-    return datetime.fromisoformat(value).strftime("%d/%m/%y")
+    # Convert value to datetime
+    created_at = datetime.fromisoformat(value)
+    now = datetime.now()
 
+    # Check if it's the same day
+    if created_at.date() != now.date():
+        return created_at.strftime("%d/%m/%y")
+
+    # Get time difference
+    delta = now - created_at
+    seconds = delta.total_seconds()
+    hours = seconds // 3600
+    minutes = seconds // 60
+
+    if hours >= 1:
+        return f"{int(hours)} hours ago"
+    elif minutes >= 1:
+        return f"{int(minutes)} minutes ago"
+    else:
+        return f"{int(seconds)} seconds ago"
