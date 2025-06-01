@@ -108,9 +108,12 @@ def submit_meddit_post():
 
     return redirect(f'/view/{new_id}')
 
-# # Delete post
-# @app.route('/delete')
-# def delete_submeddit_post():
+# Delete post
+@app.route('/delete/<int:single_id>')
+def delete_submeddit_post(single_id):
+    global posts
+    posts = [x for x in posts if x['id'] != single_id]
+    return redirect(f'/')
 
 
 # template filters
@@ -130,7 +133,7 @@ def format_date(value):
     hours = seconds // 3600
     minutes = seconds // 60
 
-    if hours >= 1:
+    if hours > 1:
         return f"{int(hours)} hours ago"
     elif minutes >= 1:
         return f"{int(minutes)} minutes ago"
