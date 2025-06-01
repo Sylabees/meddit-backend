@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>{{post.title}} - {{post.author}}</title>
-</head>
+    <head>
+        <title>{{post.title}} - {{post.author}}</title>
+        <style>
+            body {
+                margin: 2vw;
+                min-height: 90vh;
+                position: relative;
+                padding-bottom: 60px;
+            }
+            footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background-color: #eee;
+                text-align: center;
+                padding: 10px;
+            }
+        </style>
+    </head>
 
 <body>
-    <h2>Single Post for ID {{post.id}}</h2>
+    <h2>{{post.title}}</h2>
     {{post.body}}
+    <footer>
+        {{post.author}}<br>
+        {{post.created_at|format_date}}
+    </footer>
 </body>
 </html>
 

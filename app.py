@@ -1,8 +1,9 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from flask import request
+from flask import request, redirect
 from flask import render_template
 import json
+from datetime import datetime
 
 app = Flask('meddit')
 CORS(app)  # allows frontend to connect
@@ -83,5 +84,30 @@ def render_single_page(single_id):
         return jsonify({"error": f"No post with ID: {single_id}"})
     return render_template('post.html', post=single_post[0])
 
+@app.route('/create')
+def create_meddit_post():
+    return render_template('form.html')
 
+@app.route('/submit', methods = ['POST'])
+def submit_meddit_post():
+    global posts
+    new_id = max([x["id"] for x in posts], default = 0) + 1
+    if not all([request.form['title'], request.form['body'], request.form['author'], request.form['submeddit']]):
+        return "Missing fields", 400
+    new_post = {
+        "id": new_id,
+        "title": request.form['title'],
+        "body": request.form['body'],
+        "author": request.form['author'],
+        "submeddit": request.form['submeddit'],
+        "created_at": datetime.now().isoformat()
+        }
+    posts.append(new_post)
+
+    return redirect(f'/view/{new_id}')
+
+# template filters
+@app.template_filter('format_date')
+def format_date(value):
+    return datetime.fromisoformat(value).strftime("%d/%m/%y")
 
