@@ -5,8 +5,8 @@
 </head>
 
 <body>
-<h2>{{ title or 'Home Page' }}</h2>
-<a href="/create"><button>Create a New Post</button></a>
+<h2>{{ title or 'Home Page'}}</h2>
+<a href="/create?submeddit={{ submeddit }}"><button>Create a New Post</button></a>
 <ul>
 {% for post in posts %}
     <li>

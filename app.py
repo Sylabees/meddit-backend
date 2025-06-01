@@ -22,7 +22,8 @@ def home_page():
 @app.route('/submeddit/<string:submeddit>')
 def submeddit_page(submeddit):
     submeddit_posts = [x for x in posts if x['submeddit'] == submeddit]
-    return render_template('index.html', posts=submeddit_posts, title = f"Posts in {submeddit}")
+    author = request.args.get('author', '')
+    return render_template('index.html', posts=submeddit_posts, title = f"Posts in {submeddit}", author = author, submeddit = submeddit)
 
 # user pages
 @app.route('/user/<string:user>')
@@ -99,7 +100,9 @@ def render_single_page(single_id):
 # Create post
 @app.route('/create')
 def create_meddit_post():
-    return render_template('form.html')
+    submeddit = request.args.get('submeddit', '')
+    author = request.args.get('author', '')
+    return render_template('form.html', submeddit = submeddit, author=author)
 
 # Submit post
 @app.route('/submit', methods = ['POST'])

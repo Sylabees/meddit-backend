@@ -16,15 +16,15 @@
     <br>
     <fieldset>
         <legend>Select a Submeddit</legend>
-        <input type="radio" id="Dota 2" name="submeddit" value="Dota 2" required>
+        <input type="radio" id="Dota 2" name="submeddit" value="Dota 2" {% if submeddit == "Dota 2" %} checked {%endif %} required>
         <label for="Dota 2">Dota 2</label><br>
-        <input type="radio" id="Science" name="submeddit" value="Science" required>
+        <input type="radio" id="Science" name="submeddit" value="Science" {% if submeddit == "Science" %} checked {%endif %} required>
         <label for="Science">Science</label><br>
-        <input type="radio" id="Fun Facts" name="submeddit" value="Fun Facts" required>
-        <label for="Fun Facts">Fun Facts</label><br>
-        <input type="radio" id="Baldurs Gate 3" name="submeddit" value="Baldurs Gate 3" required>
+        <input type="radio" id="Fun Facts" name="submeddit" value="Fun Facts" {% if submeddit == "Fun Facts" %} checked {%endif %} required>
+        <label for="Fun Facts">Fun Facts</label><br> 
+        <input type="radio" id="Baldurs Gate 3" name="submeddit" value="Baldurs Gate 3" {% if submeddit == "Baldurs Gate 3" %} checked {%endif %} required>
         <label for="Baldurs Gate 3">Baldurs Gate 3</label><br>
-        <input type="radio" id="Useful tips" name="submeddit" value="Useful tips" required>
+        <input type="radio" id="Useful tips" name="submeddit" value="Useful tips" {% if submeddit == "Useful tips" %} checked {%endif %} required>
         <label for="Useful tips">Useful tips</label><br>
     </fieldset>
     <br>
