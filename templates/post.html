@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% include 'navigation_bar.html' %}
+<html>
+    <head>
+        <title>{{post.title}} - {{post.author}}</title>
+        <style>
+            body {
+                margin: 2vw;
+                min-height: 88vh;
+                position: relative;
+                padding-bottom: 60px;
+            }
+            footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background-color: #eee;
+                text-align: center;
+                padding: 10px;
+            }
+        </style>
+    </head>
+
+<body>
+    <h2>{{post.title}}</h2>
+    {{post.body}}
+    <footer>
+        {{post.author}}<br>
+        {{post.created_at|format_date}}<br>
+        <a href="/delete/{{post.id}}"><button>Delete this post</button></a>
+    </footer>
+</body>
+</html>
+
+

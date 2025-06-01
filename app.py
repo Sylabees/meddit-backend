@@ -1,20 +1,37 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from flask import request
+from flask import request, redirect
+from flask import render_template
+import json
+from datetime import datetime
 
 app = Flask('meddit')
 CORS(app)  # allows frontend to connect
 
-# In-memory post store (list of dicts)
-posts = [
-    {"id": 1, "title": "First post", "body": "Hello world", "author": "Matt"},
-    {"id": 2, "title": "Second post", "body": "Flask is fun", "author": "Matt"},
-]
+#Load data
+with open("meddit_posts.json") as f:
+    posts = list(json.load(f))
 
-# Root route to test
+### Home Page
+
 @app.route('/')
-def index():
-    return jsonify({"message": "Welcome to Meddit API!"})
+def home_page():
+    return render_template('index.html', posts=posts)
+
+## Submeddit pages
+@app.route('/submeddit/<string:submeddit>')
+def submeddit_page(submeddit):
+    submeddit_posts = [x for x in posts if x['submeddit'] == submeddit]
+    author = request.args.get('author', '')
+    return render_template('index.html', posts=submeddit_posts, title = f"Posts in {submeddit}", author = author, submeddit = submeddit)
+
+# user pages
+@app.route('/user/<string:user>')
+def user_page(user):
+    user_posts = [x for x in posts if x['author'] == user]
+    return render_template('index.html', posts=user_posts, title = f"Posts by {user}")
+
+### /posts/
 
 # Get all posts
 @app.route('/posts', methods=['GET'])
@@ -71,7 +88,68 @@ def update_post(single_id):
     else:
         return jsonify({"error": "unable to update"}), 400
 
+### /views/
 
+@app.route('/view/<int:single_id>')
+def render_single_page(single_id):
+    single_post = [x for x in posts if x['id'] == single_id]
+    if len(single_post) < 1:
+        return jsonify({"error": f"No post with ID: {single_id}"})
+    return render_template('post.html', post=single_post[0])
 
+# Create post
+@app.route('/create')
+def create_meddit_post():
+    submeddit = request.args.get('submeddit', '')
+    author = request.args.get('author', '')
+    return render_template('form.html', submeddit = submeddit, author=author)
 
+# Submit post
+@app.route('/submit', methods = ['POST'])
+def submit_meddit_post():
+    global posts
+    new_id = max([x["id"] for x in posts], default = 0) + 1
+    if not all([request.form['title'], request.form['body'], request.form['author'], request.form['submeddit']]):
+        return "Missing fields", 400
+    new_post = {
+        "id": new_id,
+        "title": request.form['title'],
+        "body": request.form['body'],
+        "author": request.form['author'],
+        "submeddit": request.form['submeddit'],
+        "created_at": datetime.now().isoformat()
+        }
+    posts.append(new_post)
 
+    return redirect(f'/view/{new_id}')
+
+# Delete post
+@app.route('/delete/<int:single_id>')
+def delete_submeddit_post(single_id):
+    global posts
+    posts = [x for x in posts if x['id'] != single_id]
+    return redirect(f'/')
+
+# template filters
+@app.template_filter('format_date')
+def format_date(value):
+    # Convert value to datetime
+    created_at = datetime.fromisoformat(value)
+    now = datetime.now()
+
+    # Check if it's the same day
+    if created_at.date() != now.date():
+        return f'on {created_at.strftime("%d/%m/%y")}'
+
+    # Get time difference
+    delta = now - created_at
+    seconds = delta.total_seconds()
+    hours = seconds // 3600
+    minutes = seconds // 60
+
+    if hours > 1:
+        return f" {int(hours)} hours ago"
+    elif minutes >= 1:
+        return f" {int(minutes)} minutes ago"
+    else:
+        return f" {int(seconds)} seconds ago"

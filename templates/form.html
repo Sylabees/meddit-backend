@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% include 'navigation_bar.html' %}
+<html>
+<head>
+<title> Creating New Post</title>
+</head>
+<body>
+<form method="POST" action="/submit">
+    <label for="Title">Title:</label><br>
+    <input type="text" id="title" name="title" required><br>
+    <br>
+    <label for="body">Body:</label><br>
+    <textarea id="body" name="body" rows="10" cols="50" required></textarea><br>
+    <br>
+    <label for="Author">Author:</label><br>
+    <input type="text" id="author" name="author" required><br>
+    <br>
+    <fieldset>
+        <legend>Select a Submeddit</legend>
+        <input type="radio" id="Dota 2" name="submeddit" value="Dota 2" {% if submeddit == "Dota 2" %} checked {%endif %} required>
+        <label for="Dota 2">Dota 2</label><br>
+        <input type="radio" id="Science" name="submeddit" value="Science" {% if submeddit == "Science" %} checked {%endif %} required>
+        <label for="Science">Science</label><br>
+        <input type="radio" id="Fun Facts" name="submeddit" value="Fun Facts" {% if submeddit == "Fun Facts" %} checked {%endif %} required>
+        <label for="Fun Facts">Fun Facts</label><br> 
+        <input type="radio" id="Baldurs Gate 3" name="submeddit" value="Baldurs Gate 3" {% if submeddit == "Baldurs Gate 3" %} checked {%endif %} required>
+        <label for="Baldurs Gate 3">Baldurs Gate 3</label><br>
+        <input type="radio" id="Useful tips" name="submeddit" value="Useful tips" {% if submeddit == "Useful tips" %} checked {%endif %} required>
+        <label for="Useful tips">Useful tips</label><br>
+    </fieldset>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+
+</html>
