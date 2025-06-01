@@ -139,7 +139,7 @@ def format_date(value):
 
     # Check if it's the same day
     if created_at.date() != now.date():
-        return created_at.strftime("%d/%m/%y")
+        return f'on {created_at.strftime("%d/%m/%y")}'
 
     # Get time difference
     delta = now - created_at
@@ -148,8 +148,8 @@ def format_date(value):
     minutes = seconds // 60
 
     if hours > 1:
-        return f"{int(hours)} hours ago"
+        return f" {int(hours)} hours ago"
     elif minutes >= 1:
-        return f"{int(minutes)} minutes ago"
+        return f" {int(minutes)} minutes ago"
     else:
-        return f"{int(seconds)} seconds ago"
+        return f" {int(seconds)} seconds ago"

@@ -39,6 +39,7 @@
       <div class="post-meta">
         Posted by <a href="/user/{{ post.author }}">{{ post.author }}</a>
         in <a href="/submeddit/{{ post.submeddit }}">{{ post.submeddit }}</a>
+        {{post.created_at|format_date}}
       </div>
     </div>
   {% endfor %}
